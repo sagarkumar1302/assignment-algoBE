@@ -9,7 +9,7 @@ dotenv.config();
 app.use(express.json()); // Add this line to parse JSON body
 app.use(
   cors({
-    origin: "https://frontend-password-manager-ten.vercel.app/", // Allow only frontend origin
+    origin: "https://frontend-password-manager-ten.vercel.app", // Allow only frontend origin
     credentials: true, // Allow cookies & auth headers
   })
 );
