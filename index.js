@@ -9,14 +9,14 @@ dotenv.config();
 app.use(express.json()); // Add this line to parse JSON body
 app.use(
   cors({
-    origin: "https://frontend-password-manager-ten.vercel.app", // Allow only frontend origin
+    origin: "http://localhost:5173", // Allow only frontend origin
     credentials: true, // Allow cookies & auth headers
   })
 );
 const port = 3000;
 connectDB();
 console.log(process.env.MONGO_URI);
-app.use("/api/users", userRoutes);
+app.use("/api/user", userRoutes);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
