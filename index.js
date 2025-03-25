@@ -9,7 +9,7 @@ dotenv.config();
 app.use(express.json()); // Add this line to parse JSON body
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow only frontend origin
+    origin: "https://assignment-algo-fe.vercel.app", // Allow only frontend origin
     credentials: true, // Allow cookies & auth headers
   })
 );
